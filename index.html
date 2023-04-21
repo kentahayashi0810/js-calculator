@@ -11,25 +11,111 @@
   <body>
     <div class="content-wrapper">
       <div class="calculator">
-        <input type="number" id="resultBox" value="0" />
+        <input
+          type="text"
+          id="resultBox"
+          value="0"
+          onchange="{reflect}"
+          disabled
+        />
         <div class="" id="gridContainer">
-          <button id="calcButtons-add">+</button>
-          <button id="calcButtons-deduct">-</button>
-          <button id="calcButtons-multiply">×</button>
-          <button id="calcButtons-divide">÷</button>
-          <button id="gridNumber-item7">7</button>
-          <button id="gridNumber-item8">8</button>
-          <button id="gridNumber-item9">9</button>
-          <button id="equalButton">=</button>
-          <button id="gridNumber-item4">4</button>
-          <button id="gridNumber-item5">5</button>
-          <button id="gridNumber-item6">6</button>
-          <button id="gridNumber-item1">1</button>
-          <button id="gridNumber-item2">2</button>
-          <button id="gridNumber-item3">3</button>
-          <button id="gridNumber-item0">0</button>
-          <button id="calcButtons-point">.</button>
-          <button id="calcButtons-reset">C</button>
+          <button class="operator" id="calcButtons-add" onclick="add()">
+            +
+          </button>
+          <button
+            class="operator"
+            id="calcButtons-subtract"
+            onclick="subtract()"
+          >
+            -
+          </button>
+          <button
+            class="operator"
+            id="calcButtons-multiply"
+            onclick="multiply()"
+          >
+            ×
+          </button>
+          <button class="operator" id="calcButtons-divide" onclick="didive()">
+            ÷
+          </button>
+          <button
+            value="7"
+            id="gridNumber-item7"
+            onclick="displayNum(this.value)"
+          >
+            7
+          </button>
+          <button
+            value="8"
+            id="gridNumber-item8"
+            onclick="displayNum(this.value)"
+          >
+            8
+          </button>
+          <button
+            value="9"
+            id="gridNumber-item9"
+            onclick="displayNum(this.value)"
+          >
+            9
+          </button>
+          <button value="equal" id="equalButton" onclick="showResult()">
+            =
+          </button>
+          <button
+            value="4"
+            id="gridNumber-item4"
+            onclick="displayNum(this.value)"
+          >
+            4
+          </button>
+          <button
+            value="5"
+            id="gridNumber-item5"
+            onclick="displayNum(this.value)"
+          >
+            5
+          </button>
+          <button
+            value="6"
+            id="gridNumber-item6"
+            onclick="displayNum(this.value)"
+          >
+            6
+          </button>
+          <button
+            value="1"
+            id="gridNumber-item1"
+            onclick="displayNum(this.value)"
+          >
+            1
+          </button>
+          <button
+            value="2"
+            id="gridNumber-item2"
+            onclick="displayNum(this.value)"
+          >
+            2
+          </button>
+          <button
+            value="3"
+            id="gridNumber-item3"
+            onclick="displayNum(this.value)"
+          >
+            3
+          </button>
+          <button
+            value="0"
+            id="gridNumber-item0"
+            onclick="displayNum(this.value)"
+          >
+            0
+          </button>
+          <button value="point" id="calcButtons-point">.</button>
+          <button value="clear" id="calcButtons-reset" onclick="reset()">
+            C
+          </button>
         </div>
       </div>
     </div>
